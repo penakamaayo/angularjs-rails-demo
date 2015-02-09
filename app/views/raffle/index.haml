@@ -17,12 +17,20 @@
 
           = link_to 'Draw Winner', '#', 'ng-click' => 'drawWinner($event)', :class => 'btn btn-primary btn-block'
 
+
+
         %br
         %ul.form-group
           %li{'ng-repeat' => 'entry in entries'}
             {{entry.name}}
             %span.winner{'ng-show' => 'entry.winner', 'ng-class' => '{highlight: entry == lastWinner}'}
               WINNER
+            %span.pull-right
+              = link_to '#', 'ng-click' => 'deleteEntry($event, entry, $index)' do
+                %span.glyphicon.glyphicon-remove
 
+
+
+        = link_to 'Reset', '#', 'ng-click' => 'resetWinners($event)', :class => 'btn btn-default btn-block'
 
 

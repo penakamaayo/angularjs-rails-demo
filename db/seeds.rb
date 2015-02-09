@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+Entry.create!(:name => 'Bashful')
+Entry.create!(:name => 'Doc')
+Entry.create!(:name => 'Dopey')
+Entry.create!(:name => 'Grumpy')
+Entry.create!(:name => 'Sneezy')
+Entry.create!(:name => 'Sleepy')
+Entry.create!(:name => 'Happy')
+Entry.create!(:name => 'Horny')

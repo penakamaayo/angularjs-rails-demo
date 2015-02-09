@@ -42,7 +42,6 @@ gem 'annotate', '~> 2.6.5'
 gem 'thin'
 gem 'haml-rails', '~> 0.8'
 gem 'faker'
+gem 'bootstrap-sass', '~> 3.3.3'
 
-group :assets do
-  gem 'angularjs-rails'
-end
+gem 'angularjs-rails'

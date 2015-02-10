@@ -26,7 +26,7 @@
             %span.winner{'ng-show' => 'entry.winner', 'ng-class' => '{highlight: entry == lastWinner}'}
               WINNER
             %span.pull-right
-              = link_to '#', 'ng-click' => 'deleteEntry($event, entry, $index)' do
+              = link_to '#', 'ng-click' => 'deleteEntry($event, entry)' do
                 %span.glyphicon.glyphicon-remove
 
 

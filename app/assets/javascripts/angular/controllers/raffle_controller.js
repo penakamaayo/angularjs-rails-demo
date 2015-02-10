@@ -38,18 +38,12 @@ raffler_app.controller('RaffleCtrl', ['$scope', 'Entry', function($scope, Entry)
   }
 
 
-  $scope.deleteEntry = function($event, entry, index) {
+  $scope.deleteEntry = function($event, entry) {
     $event.preventDefault();
 
+    var index = $scope.entries.indexOf(entry);
     $scope.entries.splice(index, 1);
     entry.$remove();
-
-    // angular.forEach($scope.entries, function(entry, index) {
-    //   if(entry === entry_to_delete) {
-    //     $scope.entries.splice(index, 1);
-    //     entry.$remove();
-    //   }
-    // });
   }
 
 }]);

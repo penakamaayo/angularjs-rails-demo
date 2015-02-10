@@ -1,7 +1,7 @@
 %script{:src => "//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"}
 
 .row{'ng-app' => true}
-  .col-md-5.col-md-offset-1{'ng-controller' => 'NameCtrl'}
+  .col-md-5{'ng-controller' => 'NameCtrl'}
     %h1 Example 4
     %small
     Initializing the model using an Angular controller, defined with a global function.
@@ -22,7 +22,7 @@
     %br
 
 
-  .col-md-6{:style => 'padding-top:60px'}
+  .col-md-7{:style => 'padding-top:60px'}
     = image_tag 'example4.png', :class => 'img-responsive'
 
 :javascript

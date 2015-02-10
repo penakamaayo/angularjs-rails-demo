@@ -1,0 +1,33 @@
+.row{'ng-app' => 'angular_example_app'}
+  .col-md-5{'ng-controller' => 'NameCtrl'}
+    %h1 Example 5
+    %small
+    Initializing the model using an Angular controller, defined within an Angular module.
+
+    %br
+    %br
+    %br
+
+    %label First Name:
+    = text_field_tag :first_name, nil, 'ng-model' => 'firstName'
+
+    %label Last Name
+    = text_field_tag :last_name, nil, 'ng-model' => 'lastName'
+
+    %h1 Hello {{firstName}} {{lastName}}!
+
+    %br
+    %br
+
+
+  .col-md-7{:style => 'padding-top:60px'}
+    = image_tag 'example5.png', :class => 'img-responsive'
+
+:javascript
+  var example_app = angular.module('angular_example_app', []);
+
+  example_app.controller('NameCtrl', function($scope){
+    $scope.firstName = 'penya';
+    $scope.lastName = 'boy'
+  });
+

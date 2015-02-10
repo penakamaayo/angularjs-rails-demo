@@ -1,0 +1,17 @@
+.row{'ng-app' => true}
+  .col-md-6.col-md-offset-3
+    %h1 Example 3
+
+    %label First Name:
+    = text_field_tag :first_name, nil, 'ng-model' => 'firstName'
+
+    %label Last Name
+    = text_field_tag :last_name, nil, 'ng-model' => 'lastName'
+
+    %h1 Hello {{firstName}} {{lastName}}!
+
+    %br
+    %br
+    angular-way
+
+    = image_tag 'example3.png', :class => 'img-responsive'

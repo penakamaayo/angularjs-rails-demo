@@ -1,5 +1,5 @@
 !!!
-%html{'ng-app' => 'raffler_app'}
+%html
   %head
     %title AngularRaffler
 
@@ -7,4 +7,5 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    .container{:style => 'padding-top: 40px;'}
+      = yield

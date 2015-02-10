@@ -2,6 +2,13 @@ Rails.application.routes.draw do
   resources :entries, :defaults => {:format => :json}
 
   root :to => 'raffle#index'
+
+  get 'example1',                      to: 'static_pages#example1'
+  get 'example2',                      to: 'static_pages#example2'
+  get 'example3',                      to: 'static_pages#example3'
+  get 'example4',                      to: 'static_pages#example4'
+  get 'example5',                      to: 'static_pages#example5'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

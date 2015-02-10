@@ -1,0 +1,60 @@
+.row
+  .col-md-7
+    vanilla-js-dom-api-way
+    %pre
+      = capture_haml(@layout1) do |text|
+        %p= text
+
+  .col-md-5
+    %h1 Example 1
+
+    %label Name:
+    = text_field_tag :text, nil, :id => 'js-text-input1'
+
+
+    %h2
+      Hello
+
+      = succeed '!' do
+        %span#js-name-div1
+
+
+
+.row
+  .col-md-7
+    jquery-way
+    %pre
+      = capture_haml(@layout2) do |a|
+        %p= a
+
+  .col-md-5
+
+    %label Name:
+    = text_field_tag :text, nil, :id => 'js-text-input2'
+
+
+    %h2
+      Hello
+
+      = succeed '!' do
+        %span#js-name-div2
+
+
+
+:javascript
+  var textInputElement = document.getElementById('js-text-input1'),
+      nameDivElement = document.getElementById('js-name-div1');
+
+  textInputElement.addEventListener('keyup', function(){
+    var text = textInputElement.value;
+    nameDivElement.innerHTML = text;
+  });
+
+
+  var textInputElement2 = document.getElementById('js-text-input2'),
+      nameDivElement2 = document.getElementById('js-name-div2');
+
+  textInputElement2.addEventListener('keyup', function(){
+    var text = textInputElement2.value;
+    nameDivElement2.innerHTML = text;
+  });

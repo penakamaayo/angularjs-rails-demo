@@ -13,15 +13,18 @@
 
           = text_field_tag :name, nil, 'ng-model' => 'newEntry.name'
 
+
+
           = submit_tag 'Add', :class => 'btn btn-danger'
 
           = link_to 'Draw Winner', '#', 'ng-click' => 'drawWinner($event)', :class => 'btn btn-primary btn-block'
 
 
-
+          %br
+          = text_field_tag :name_filter, nil, 'ng-model' => 'name_filter', :placeholder => 'filter entries by name'
         %br
         %ul.form-group
-          %li{'ng-repeat' => 'entry in entries'}
+          %li{'ng-repeat' => "entry in entries | filter:name_filter"}
             {{entry.name}}
             %span.winner{'ng-show' => 'entry.winner', 'ng-class' => '{highlight: entry == lastWinner}'}
               WINNER
